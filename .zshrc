@@ -10,8 +10,16 @@ setopt EXTENDED_HISTORY
 setopt autocd
 
 autoload -U compinit; compinit
+#
+# Ctrl+X+e to edit command line in neovim
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^Xe' edit-command-line
 
 source <(fzf --zsh)
+
+# Enable hidden files in Zsh completion
+_comp_options+=(globdots)
 
 source "${CONFIG}/zsh/fzf-tab/fzf-tab.plugin.zsh"
 source "${CONFIG}/zsh/.zshrc.local"
