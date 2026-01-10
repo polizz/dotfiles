@@ -10,7 +10,8 @@ font-size = 15
 # font-synthetic-style = bold-italic, no-bold, no-italic 
 # font-feature = +calt,+dlig,+liga
 
-theme = dark:Ayu, light:Ayu Light
+theme = Ayu
+# theme = dark:Ayu, light:Ayu Light
 # theme = Alien Blood
 # theme = dark:Farmhouse Dark, light: Farmhouse Light
 # theme = dark:Catppuccin Macchiato, light:Catppuccin Latte
@@ -21,7 +22,10 @@ cursor-invert-fg-bg = true
 
 # minimum-contrast = 1.05
 
-# background-opacity = 0.90
+background-opacity = 0.90
 
 keybind = super+shift+comma=reload_config
 keybind = command+k=text:\x0c
+
+shell-integration-features = ssh-env
+
