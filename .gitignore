@@ -1,2 +1,4 @@
 theme_state
 lazy-lock.json
+secrets*
+*.local
