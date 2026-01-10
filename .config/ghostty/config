@@ -1,0 +1,31 @@
+# font-family = 0xProto Nerd Font
+# font-family = Hack Nerd Font Mono
+font-family = FantasqueSansM Nerd Font
+font-size = 15
+
+# font-style = Regular
+# font-style-bold = Bold
+# font-style-italic = Italic
+# font-style-bold-italic = Bold
+# font-synthetic-style = bold-italic, no-bold, no-italic 
+# font-feature = +calt,+dlig,+liga
+
+theme = Ayu
+# theme = dark:Ayu, light:Ayu Light
+# theme = Alien Blood
+# theme = dark:Farmhouse Dark, light: Farmhouse Light
+# theme = dark:Catppuccin Macchiato, light:Catppuccin Latte
+# theme = Catppuccin Mocha
+
+mouse-hide-while-typing = true
+cursor-invert-fg-bg = true
+
+# minimum-contrast = 1.05
+
+background-opacity = 0.90
+
+keybind = super+shift+comma=reload_config
+keybind = command+k=text:\x0c
+
+shell-integration-features = ssh-env
+
