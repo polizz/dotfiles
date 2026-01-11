@@ -21,8 +21,8 @@ source <(fzf --zsh)
 # Enable hidden files in Zsh completion
 _comp_options+=(globdots)
 
-source "${CONFIG}/zsh/fzf-tab/fzf-tab.plugin.zsh"
-source "${CONFIG}/zsh/.zshrc.local"
-source "${CONFIG}/zsh/git/git.plugin.zsh"
-source "${CONFIG}/zsh/aliases.zsh"
-source "${CONFIG}/zsh/secrets.zsh"
+[ -f "${CONFIG}/zsh/fzf-tab/fzf-tab.plugin.zsh" ] && source "${CONFIG}/zsh/fzf-tab/fzf-tab.plugin.zsh"
+[ -f "${CONFIG}/zsh/.zshrc.local" ] && source "${CONFIG}/zsh/.zshrc.local"
+[ -f "${CONFIG}/zsh/git/git.plugin.zsh" ] && source "${CONFIG}/zsh/git/git.plugin.zsh"
+[ -f "${CONFIG}/zsh/aliases.zsh" ] && source "${CONFIG}/zsh/aliases.zsh"
+[ -f "${CONFIG}/zsh/secrets.zsh" ] && source "${CONFIG}/zsh/secrets.zsh"
