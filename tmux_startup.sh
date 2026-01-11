@@ -10,7 +10,7 @@ TAB_NOTES_DIR="~/notes"
 
 SESSION1="Story1"
 SESSION_EXISTS=$(tmux list-sessions | grep "$SESSION1")
-SESSION1_DIR=$(PROJECTS)/sams-catalog-services/
+SESSION1_DIR=$(PROJECTS)/
 
 TAB1_NAME="nvim"
 TAB2_NAME="sh"
