@@ -1,0 +1,46 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+# Use a custom format to match your Oh My Zsh layout
+# $all is excluded to keep it minimal like your original prompt
+format = """$directory$git_branch$git_status$character"""
+
+# 1. The Status Arrow (replaces %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ))
+[character]
+success_symbol = "[➜ ](bold green)"
+error_symbol = "[➜ ](bold red)"
+
+# 2. The Directory (replaces %{$fg[cyan]%}%~)
+[directory]
+style = "bold cyan"
+truncation_length = 0 # Set to 0 to show full path like %~
+truncate_to_repo = false # Don't cut off the path at the git root
+
+# 3. Git Branch
+[git_branch]
+symbol = " "
+format = "[git:\\(](bold cyan)[$branch](bold red)[\\)](bold cyan) "
+
+[git_status]
+style = "bold red"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[aws]
+disabled = true
+
+[package]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[cmd_duration]
+min_time = 500
+format = 'underwent [$duration](bold yellow)'

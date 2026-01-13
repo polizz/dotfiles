@@ -2,10 +2,9 @@
 # TLDR Dotfiles
 
 1. Install GNU stow
-  `brew install stow`
+  `brew install stow fzf starship eza`
 2. Run stow in .dotfiles
   `stow .`
-
 
 To delete all symlinks:
   `stow -D .`

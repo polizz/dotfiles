@@ -22,10 +22,10 @@ cursor-invert-fg-bg = true
 
 # minimum-contrast = 1.05
 
-background-opacity = 0.90
+# background-opacity = 0.90
+background-opacity = 1
 
 keybind = super+shift+comma=reload_config
 keybind = command+k=text:\x0c
 
 shell-integration-features = ssh-env
-

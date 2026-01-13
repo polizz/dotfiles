@@ -1,44 +1,322 @@
-add_newline = false
+"$schema" = 'https://starship.rs/config-schema.json'
 
-# Use a custom format to match your Oh My Zsh layout
-# $all is excluded to keep it minimal like your original prompt
-format = """$directory$git_branch$git_status$character"""
+format = """$directory$git_branch$git_status
+$character"""
 
-# 1. The Status Arrow (replaces %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ))
+palette = 'kanagawa'
+
 [character]
 success_symbol = "[➜ ](bold green)"
 error_symbol = "[➜ ](bold red)"
 
-# 2. The Directory (replaces %{$fg[cyan]%}%~)
-[directory]
-style = "bold cyan"
-truncation_length = 0 # Set to 0 to show full path like %~
-truncate_to_repo = false # Don't cut off the path at the git root
-
-# 3. Git Branch
-[git_branch]
-symbol = ""
-format = "[git:\\(](bold cyan)[$branch](bold red)[\\)](bold cyan) "
-
-[git_status]
-style = "bold red"
-format = '([\[$all_status$ahead_behind\]]($style) )'
-
 [aws]
-disabled = true
+symbol = " "
 
-[package]
-disabled = true
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[deno]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fortran]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
 
 [gcloud]
-disabled = true
+symbol = " "
 
-[azure]
-disabled = true
+[git_branch]
+symbol = " "
+style = "symbol bold"
+# format = '[$symbol:\([$branch](branch)\)](symbol) '
+
+[git_status]
+style = "bold green"
+# untracked = " "
+modified = ""
+
+[git_commit]
+tag_symbol = '  '
+
+[golang]
+symbol = " "
+
+[gradle]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
 
 [nodejs]
-disabled = true
+symbol = " "
 
-[cmd_duration]
-min_time = 500
-format = 'underwent [$duration](bold yellow)'
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[pixi]
+symbol = "󰏗 "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+disabled = true
+symbol = "󱘗 "
+format = "$symbol$version"
+style = "red"
+
+[scala]
+symbol = " "
+
+[status]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[xmake]
+symbol = " "
+
+[zig]
+symbol = " "
+
+
+[palettes.tokyonight]
+error = "#f7768e"
+success = "#9ece6a"
+directory = "#2ac3de"
+branch = "#f7768e"
+symbol = "#7dcfff"
+status = "#9d7cd8"
+python = "#565f89"
+node = "#73daca"
+rust = "#ff9e64"
+go = "#7aa2f7"
+
+[palettes.gruvbox]
+error = "#fb4934"
+success = "#b8bb26"
+directory = "#73daca"
+branch = "#fb4934"
+symbol = "#83a598"
+status = "#928374"
+python = "#fabd2f"
+node = "#83a598"
+rust = "#fe8019"
+go = "#83a598"
+
+[palettes.kanagawa]
+error = "#E46876"
+success = "#98BB6C"
+directory = "#7FB4CA"
+branch = "#E46876"
+symbol = "#7FB4CA"
+status = "#54546D"
+python = "#DCA561"
+node = "#98BB6C"
+rust = "#DCA561"
+go = "#7FB4CA"
+
+[palettes.catppuccin_mocha]
+error = "#F38BA8"
+success = "#A6E3A1"
+directory = "#89B4FA"
+branch = "#F38BA8"
+symbol = "#89B4FA"
+status = "#9399B2"
+python = "#F9E2AF"
+node = "#A6E3A1"
+rust = "F9E2AF"
+go = "#89B4FA"
+
+[palettes.darkplus]
+error = "#ff1212"
+success = "#4EC9B0"
+directory = "#569CD6"
+branch = "#FF6B6B"
+symbol = "#4EC9B0"
+status = "#C586C0"
+python = "#DCDCAA"
+go = "#9CDCFE"
+node = "#4EC9B0"
+rust = "#4EC9B0"
+
+[palettes.ayumirage]
+error = "#f28779"
+success = "#D5FF80"
+directory = "#FAD07B"
+branch = "#f28779"
+symbol = "#73D0FF"
+status = "#DFBFFF"
+python = "#DCDCAA"
+go = "#9CDCFE"
+node = "#4EC9B0"
+rust = "#4EC9B0"
+
+[palettes.everforestdark]
+# error = "#E67E81"
+error = "red"
+success = "#7EB98C"
+directory = "#DBBC7F"
+# branch = "#E67E81"
+branch = "yellow"
+# symbol = "#7FBBB3"
+symbol = "blue"
+status = "#D699B6"
+python = "#DBBC7F"
+style_override = "blue"
+
+[palettes.github_dark]
+error = "#F25D5D"       # Red-ish tone for errors (GitHub's dark red)
+success = "#62D863"     # Green for success
+directory = "#8AB6D6"   # Soft blue for directory (matches GitHub dark background)
+branch = "#F25D5D"      # Red for git branch (to match the error color)
+symbol = "#8AB6D6"      # Light blue for symbol
+status = "#6C6C6C"      # Dark gray for status (GitHub dark status bar)
+python = "#FFD700"      # Yellow for Python, mimicking GitHub's yellowish tone
+node = "#80B6F4"        # Light blue for nodejs (if you choose to use it)
+rust = "#D77B7B"        # Rust color that’s not too overpowering (reddish)
+go = "#3E8EDE"          # Go language, matching the blue theme of GitHub darkymbol = " "
