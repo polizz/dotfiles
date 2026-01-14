@@ -29,3 +29,5 @@ keybind = super+shift+comma=reload_config
 keybind = command+k=text:\x0c
 
 shell-integration-features = ssh-env
+
+quit-after-last-window-closed = true
