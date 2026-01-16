@@ -35,7 +35,7 @@ alias gcma='g commit --amend'
 alias zb='zig build'
 
 alias cr='cargo run'
-alias cb='carbo build'
+alias cb='cargo build'
 alias cbr='cargo build --release'
 
 function ct() {
