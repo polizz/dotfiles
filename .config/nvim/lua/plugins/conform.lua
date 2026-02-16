@@ -14,6 +14,7 @@ return {
         lsp_format = "fallback",
       },
       formatters_by_ft = {
+        c = { "clang-format" },
         lua = { "stylua" },
         -- You can customize some of the format options for the filetype (:help conform.format)
         -- markdown = { "markdownfmt" },

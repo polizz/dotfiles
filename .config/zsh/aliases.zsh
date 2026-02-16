@@ -46,3 +46,7 @@ function ctn() {
   cargo test $1 -- --nocapture
 }
 
+# Development build: all warnings, sanitizers, debug info
+alias cdev='clang -std=c23 -Wall -Wextra -Werror -Wshadow -Wpedantic -fsanitize=address,undefined -fno-omit-frame-pointer -g'
+# Release build: optimized, no sanitizers
+alias crel='clang -std=c23 -Wall -Wextra -Wshadow -Werror -O2'

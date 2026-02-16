@@ -46,12 +46,15 @@ return {
       zls = {
         settings = {
           format_on_save = true,
-          -- enable_build_on_save = true
+          enable_build_on_save = true,
+          enable_ast_check_diagnostics = true,
+          operator_completions = true,
         }
       },
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
       rust_analyzer = {
         settings = {
+          format_on_save = true,
           ["rust-analyzer"] = {
             cargo = {
               extraEnv = { CARGO_PROFILE_RUST_ANALYZER_INHERITS = 'dev', },
