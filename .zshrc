@@ -2,6 +2,7 @@
 
 # timing startup command: time (zsh -i -c exit)
 export CONFIG="$HOME/.config"
+export XDG_CONFIG_HOME=$CONFIG
 
 source "${CONFIG}/zsh/exports.zsh"
 
