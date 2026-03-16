@@ -11,6 +11,8 @@ font-size = 15
 # font-feature = +calt,+dlig,+liga
 
 theme = Ayu
+# theme = Catppuccin Latte
+#
 # theme = dark:Ayu, light:Ayu Light
 # theme = Alien Blood
 # theme = dark:Farmhouse Dark, light: Farmhouse Light
