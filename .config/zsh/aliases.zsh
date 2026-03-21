@@ -50,3 +50,9 @@ function ctn() {
 alias cdev='clang -std=c23 -Wall -Wextra -Werror -Wshadow -Wpedantic -fsanitize=address,undefined -fno-omit-frame-pointer -g'
 # Release build: optimized, no sanitizers
 alias crel='clang -std=c23 -Wall -Wextra -Wshadow -Werror -O2'
+
+newrepo() {
+    ssh neptune "git init --bare /mnt/MAIN/git/$1.git && chown -R git:git /mnt/MAIN/git/$1.git" 
+    git remote add origin git-neptune:$1.git
+    git push -u origin master
+}

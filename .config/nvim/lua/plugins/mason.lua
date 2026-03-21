@@ -7,7 +7,7 @@ return {
         "lua-language-server",
         "clangd",
         "typescript-language-server",
-        "basedpyright",
+        "pyright",
         "zls",
         "rust-analyzer",
         "marksman",
