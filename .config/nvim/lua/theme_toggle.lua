@@ -1,7 +1,7 @@
 local M = {}
 
 local uv = vim.uv
-local sentinel_path = vim.fn.expand('~/.config/nvim/theme_state')
+local sentinel_path = vim.fn.expand('~/.config/theme_state')
 local is_toggling = false  -- Flag to prevent self-triggering
 
 -- Theme configuration
