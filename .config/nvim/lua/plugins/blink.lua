@@ -1,5 +1,6 @@
 return {
   enabled = true,
+  versoion = "1.*",
   'saghen/blink.cmp',
   opts = {
     completion = {
