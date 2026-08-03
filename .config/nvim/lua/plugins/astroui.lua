@@ -3,10 +3,15 @@ return {
   opts = {
     folding = {
       enabled = true,
-      methods = { "treesitter", "lsp" , "indent" },
+      methods = { "treesitter", "lsp", "indent" },
     },
     colorscheme = "ayu-dark",
     highlights = {
+      ["ayu-light"] = {
+        LspReferenceText = { fg = "#e7eef7" },
+        LspReferenceRead = { fg = "#e7eef7" },
+        LspReferenceWrite = { fg = "#d3e1f5" },
+      },
       -- ["ayu-dark"] = {
       --   LineNr = { fg = "#555555" },
       -- },
@@ -15,7 +20,7 @@ return {
         linenr = { link = "conceal" },
         -- linenr = { fg = "#555555" },
         -- SnacksPickerDir = { link = "Comment" },          -- or set a specific fg
-        SnacksPickerDir = { link = "Conceal" },          -- or set a specific fg
+        SnacksPickerDir = { link = "Conceal" }, -- or set a specific fg
         -- SnacksPickerDir = { link = "Directory" },          -- or set a specific fg
         -- SnacksPickerPathHidden = { fg = "#8a8a8a" },       -- was often linked to Comment
         -- SnacksPickerPathIgnored = { fg = "#8a8a8a" },

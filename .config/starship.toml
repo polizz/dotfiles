@@ -72,6 +72,10 @@ style = "symbol bold"
 style = "bold green"
 # untracked = " "
 modified = ""
+ahead = ""
+behind = ""
+diverged = ""
+up_to_date = ""
 
 [git_commit]
 tag_symbol = '  '

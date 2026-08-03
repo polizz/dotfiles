@@ -9,7 +9,6 @@ source "${CONFIG}/zsh/exports.zsh"
 eval "$(starship init zsh)"
 
 # 1. Enable extended globbing for the (#q) syntax
-setopt EXTENDEDGLOB
 setopt EXTENDED_HISTORY
 setopt autocd
 #
@@ -18,11 +17,17 @@ _comp_options+=(globdots)
 
 zcdump="${ZDOTDIR:-$HOME}/.zcompdump"
 autoload -Uz compinit
-if [[ $zcdump(#qN.mh-24) ]]; then
-  compinit -C "$zcdump"
-else
-  compinit "$zcdump"
-fi
+
+() {
+  setopt localoptions extendedglob
+
+  if [[ $zcdump(#qN.mh-24) ]]; then
+    compinit -C "$zcdump"
+  else
+    compinit "$zcdump"
+  fi
+}
+
 
 # Ctrl+X+e to edit command line in neovim
 autoload edit-command-line
@@ -36,5 +41,8 @@ source <(fzf --zsh)
 [ -f "${CONFIG}/zsh/git/git.plugin.zsh" ] && source "${CONFIG}/zsh/git/git.plugin.zsh"
 [ -f "${CONFIG}/zsh/aliases.zsh" ] && source "${CONFIG}/zsh/aliases.zsh"
 [ -f "${CONFIG}/zsh/secrets.zsh" ] && source "${CONFIG}/zsh/secrets.zsh"
+
+
+unsetopt EXTENDEDGLOB
 
 # zprof

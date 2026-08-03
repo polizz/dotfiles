@@ -10,3 +10,5 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -f "${CONFIG}/zsh/exports.sh.local" ] && source "${CONFIG}/zsh/exports.sh.local"
+
+export DISABLE_NON_ESSENTIAL_MODEL_CALLS=1
